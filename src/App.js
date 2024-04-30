@@ -15,7 +15,7 @@ const App =() => {
     let audioContext = new AudioContext();
     if (!source.current) {
       source.current = audioContext.createMediaElementSource(audioRef.current);
-      analyzer.current = audioContext.createAnalyzer();
+      analyzer.current = audioContext.createAnalyser();
       source.current.connect(analyzer.current);
       analyzer.current.connect(audioContext.destination);
     }
